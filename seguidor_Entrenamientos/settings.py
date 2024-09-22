@@ -31,12 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "crispy_forms", #El crispy es para que se vean más bonitos los templates de login y register
+    "crispy_bootstrap5",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'registros',
+    'ejercicios',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +125,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Esto sirve para decir que ahora los usuarios se harán desde el modelo en la aplicación "registros" llamado "CustomUser"
+AUTH_USER_MODEL = 'registros.CustomUser'
+
+#Se instaló: 'pip install crispy-bootstrap5', para eso so llas siguientes dos lineas, también se agregaron 2 lineas en "installed apps"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
