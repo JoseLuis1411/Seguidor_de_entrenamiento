@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$lvo6d!l+s4%inrgvb&i)_#ma+ge+&w&nh@*8ot@rzt-f0ad*c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ejercicios'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'seguidor_Entrenamientos.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['~/proyectos/seguidor_Entrenamientos/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
